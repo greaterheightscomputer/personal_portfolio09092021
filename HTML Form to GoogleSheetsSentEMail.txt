@@ -1,0 +1,61 @@
+How to Send Email Using Google Sheet 
+- Open your gmail email account
+- click on Google app icon 
+- click on Sheets and Forms
+- click on Blank Forms 
+- Name it as ProfolioForm 
+- add all the form input field in the correct order by pressing the + sign
+ Name, Email, Subject, Your Message
+- click on Preview icon
+- right click then click on inspect 
+- press cltr + f to search for form input OR entry
+- copy the input field name attribute with it value to your own html form tags in the right order
+- add these attributes to the form tags
+	action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSewvoAfK6Wx8YFbHJSeA7_iQlJpyN31KOjW3c-	7Pw8rzFpvmw/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="submitted=true"
+- copy the google form action url to your html form action url like this
+action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhiyv2pHDiaZUtjwnLbJyT066ewdQkUVYrgFS3At0z9AOnzQ/formResponse"
+-  <!-- redirect user to your website after submitting to Google sheets Start -->
+            <script type="text/javascript">
+              var submitted = false;
+            </script>
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              style="display: none"
+              onload="if(submitted) {window.location='https://weddingwebsite22082021.netlify.app/';}"
+            ></iframe>            
+     <!-- redirect user to your website after submitting to Google sheets end -->
+past the above on top of the form tags to redirect user to the website after submission to google sheets
+- let test the google form with our html form page with your internet on.
+- go back to google form click on Responses tab to view the information.
+- click on Create Spreadsheet icon + to create Google SpreadSheet, click Create button
+- you can the view the information enter on your website form on the Google sheets.
+- Sending of Mail 
+-  click on Add-ons in Google Sheets to install plugin or add-on called Yet Another Email Merge to connect or merge your database spreadsheet with your Gmail so that you can send emails.
+- click Get add-ons, search for yet another mail merger add-on or plugin, click on Yet Another Mail Merge,
+click on your mail to install the add-on, click Allow button.
+- create email template to send out mails in your google gmail 
+- one template to recipient without reciptent mail and the other template to you to alert you that you have a mail with your mail as a recipient.
+- go back to google sheets to setup Yet Another Email Merge add-on 
+- click Add-ons on the Menu bar, click on Yet Another Mail Merger, click on Start Mail Merge
+- select the Email Template you want to send out to recipients then click on Send test email button to test OR click on Send button
+- setup the second template to notify you if an email is send to you 
+- click Add-ons on the Menu bar, click on Yet Another Mail Merger, configure form submission notification
+- check Notify one or more addresses of all responses, select the 2nd Email template you created for notification
+- check Notify address submitted by the form, select 1st Email template you created for the recipients
+- select Email in Recipients column 
+- check the Track emails opened, clicked or bounced
+- click on Save button
+- It return this message 
+You have successfully set up your notification rules. Your form is ready for submissions.
+- click on OK button
+- Then test you the emails from you html form page.
+
+
+- With the free version of Yet Another Email Merge plugin you can send up to 50 mails in 24hours or a day but with the pay version you can send more.
+
+
+ 
